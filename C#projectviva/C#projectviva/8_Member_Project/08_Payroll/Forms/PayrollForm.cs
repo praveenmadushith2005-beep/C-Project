@@ -151,4 +151,50 @@ namespace TeaEstate
             {
                 MessageBox.Show(ex.Message, "Error");
             }
+        }        }
+        
+        
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_selectedId == 0)
+            {
+                MessageBox.Show("Please select a payment from the list first.", "Error");
+                return;
+            }
+
+            DialogResult answer = MessageBox.Show(
+                "Delete this salary payment?", "Confirm", MessageBoxButtons.YesNo);
+            if (answer != DialogResult.Yes) return;
+
+            try
+            {
+                _repo.DeleteById(_selectedId);
+                MessageBox.Show("Salary payment deleted.", "Success");
+                ClearInputs();
+                LoadSalaries();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
+
+        
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearInputs();
+        }
+
+   
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            ClearInputs();
+            LoadSalaries();
+        }
+
+        private void dgvSalary_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return; 
+
+            DataGridViewRow row = dgvSalary.Rows[e.RowIndex];
+
