@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
-    
+
     public static class DatabaseHelper
     {
 
@@ -77,7 +77,7 @@ namespace TeaEstate
                 using (SqlCommand check = new SqlCommand("SELECT OBJECT_ID('[User]','U');", con))
                 {
                     object result = check.ExecuteScalar();
-                    if (result != null && result != DBNull.Value) return; 
+                    if (result != null && result != DBNull.Value) return;
                 }
 
                 using (SqlCommand setup = new SqlCommand(CreateAndSeedSql, con))
