@@ -221,3 +221,58 @@ namespace TeaEstate
             RecomputeTotal();
         }
 
+        private void RecomputeTotal()
+        {
+            int days;
+            decimal rate;
+            decimal bonus;
+
+            int.TryParse(txtDaysWorked.Text.Trim(), out days);
+            decimal.TryParse(txtDailyRate.Text.Trim(), out rate);
+            decimal.TryParse(txtYieldBonus.Text.Trim(), out bonus);
+
+            SalaryPayment temp = new SalaryPayment();
+            temp.DaysWorked = days;
+            temp.DailyRate = rate;
+            temp.YieldBonus = bonus;
+
+            lblTotal.Text = temp.CalculateTotal().ToString("0.00");
+        }
+
+    
+        private int WorkerIdForName(string name)
+        {
+            DataTable dt = cmbWorker.DataSource as DataTable;
+            if (dt == null) return 0;
+
+            foreach (DataRow r in dt.Rows)
+            {
+                if (string.Equals(SafeText(r["Name"]), name, StringComparison.Ordinal))
+                {
+                    return Convert.ToInt32(r["WorkerID"]);
+                }
+            }
+            return 0;
+        }
+
+        
+        private void ClearInputs()
+        {
+            _selectedId = 0;
+            cmbWorker.SelectedIndex = -1;
+            txtMonth.Clear();
+            txtDaysWorked.Clear();
+            txtDailyRate.Clear();
+            txtYieldBonus.Clear();
+            dtpPaidDate.Value = DateTime.Today;
+            lblTotal.Text = "0.00";
+        }
+
+        
+        private string SafeText(object value)
+        {
+            return value == null || value == DBNull.Value ? "" : value.ToString();
+        }
+    }
+}
+
