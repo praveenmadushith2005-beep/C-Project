@@ -52,3 +52,51 @@ namespace TeaEstate
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            if (cmbWorker.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a worker first.", "Error");
+                return;
+            }
+
+            string month = txtMonth.Text.Trim();
+            if (month.Length == 0)
+            {
+                MessageBox.Show("Please enter a month (e.g. 2026-05).", "Error");
+                return;
+            }
+
+            try
+            {
+                int workerId = Convert.ToInt32(cmbWorker.SelectedValue);
+
+                
+                int days = _repo.CountPresentDays(workerId, month);
+                txtDaysWorked.Text = days.ToString();
+
+                
+                decimal yield = _repo.SumYield(workerId, month);
+                decimal suggestedBonus = yield * BonusPerKg;
+                txtYieldBonus.Text = suggestedBonus.ToString("0.00");
+
+                
+                RecomputeTotal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+            if (cmbWorker.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a worker first.", "Error");
+                return;
+            }
