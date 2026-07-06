@@ -198,3 +198,26 @@ namespace TeaEstate
 
             DataGridViewRow row = dgvSalary.Rows[e.RowIndex];
 
+            
+            object idValue = row.Cells["PaymentID"].Value;
+            _selectedId = (idValue == null || idValue == DBNull.Value) ? 0 : Convert.ToInt32(idValue);
+
+         
+            string workerName = SafeText(row.Cells["WorkerName"].Value);
+            cmbWorker.SelectedValue = WorkerIdForName(workerName);
+
+            txtMonth.Text = SafeText(row.Cells["Month"].Value);
+            txtDaysWorked.Text = SafeText(row.Cells["DaysWorked"].Value);
+            txtDailyRate.Text = SafeText(row.Cells["DailyRate"].Value);
+            txtYieldBonus.Text = SafeText(row.Cells["YieldBonus"].Value);
+
+          
+            object paid = row.Cells["PaidDate"].Value;
+            if (paid != null && paid != DBNull.Value)
+            {
+                dtpPaidDate.Value = Convert.ToDateTime(paid);
+            }
+
+            RecomputeTotal();
+        }
+
