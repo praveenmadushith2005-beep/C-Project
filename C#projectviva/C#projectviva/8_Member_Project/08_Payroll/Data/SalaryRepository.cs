@@ -54,3 +54,41 @@ namespace TeaEstate
             string sql = "SELECT WorkerID, Name FROM Worker ORDER BY Name";
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+        public int CountPresentDays(int workerId, string month)
+        {
+            string sql =
+                "SELECT COUNT(*) FROM Attendance " +
+                "WHERE WorkerID = @w AND Status = 'Present' " +
+                "AND CONVERT(NVARCHAR(7),[Date],120) = @month";
+
+            SqlParameter[] prms =
+            {
+                new SqlParameter("@w", workerId),
+                new SqlParameter("@month", month)
+            };
+
+            object result = DatabaseHelper.ExecuteScalar(sql, prms);
+            if (result == null || result == DBNull.Value) return 0;
+            return Convert.ToInt32(result);
+        }
+
+        
+        public decimal SumYield(int workerId, string month)
+        {
+            string sql =
+                "SELECT SUM(Quantity) FROM YieldRecord " +
+                "WHERE WorkerID = @w AND CONVERT(NVARCHAR(7),[Date],120) = @month";
+
+            SqlParameter[] prms =
+            {
+                new SqlParameter("@w", workerId),
+                new SqlParameter("@month", month)
+            };
+
+            object result = DatabaseHelper.ExecuteScalar(sql, prms);
+            if (result == null || result == DBNull.Value) return 0m;
+            return Convert.ToDecimal(result);
+        }
+    }
+}
