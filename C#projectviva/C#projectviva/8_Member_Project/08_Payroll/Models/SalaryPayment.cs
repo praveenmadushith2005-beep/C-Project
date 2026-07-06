@@ -37,4 +37,45 @@ namespace TeaEstate
             set { _month = value; }
         }
 
+        public int DaysWorked
+        {
+            get { return _daysWorked; }
+            set { _daysWorked = value; }
+        }
+
+      
+        public decimal DailyRate
+        {
+            get { return _dailyRate; }
+            set { _dailyRate = value; }
+        }
+
+        
+        public decimal YieldBonus
+        {
+            get { return _yieldBonus; }
+            set { _yieldBonus = value; }
+        }
+
+        
+        public decimal TotalAmount
+        {
+            get { return _totalAmount; }
+            set { _totalAmount = value; }
+        }
+
+        
+        public DateTime PaidDate
+        {
+            get { return _paidDate; }
+            set { _paidDate = value; }
+        }
+
        
+        public decimal CalculateTotal()
+        {
+            return _daysWorked * _dailyRate + _yieldBonus;
+        }
+    }
+}
+
