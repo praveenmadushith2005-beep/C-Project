@@ -100,3 +100,55 @@ namespace TeaEstate
                 MessageBox.Show("Please select a worker first.", "Error");
                 return;
             }
+
+
+            string month = txtMonth.Text.Trim();
+            if (month.Length == 0)
+            {
+                MessageBox.Show("Month is required (e.g. 2026-05).", "Error");
+                return;
+            }
+
+            
+            int daysWorked;
+            if (!int.TryParse(txtDaysWorked.Text.Trim(), out daysWorked))
+            {
+                MessageBox.Show("Days Worked must be a whole number.", "Error");
+                return;
+            }
+
+            decimal dailyRate;
+            if (!decimal.TryParse(txtDailyRate.Text.Trim(), out dailyRate))
+            {
+                MessageBox.Show("Daily Rate must be a number.", "Error");
+                return;
+            }
+
+            decimal yieldBonus;
+            if (!decimal.TryParse(txtYieldBonus.Text.Trim(), out yieldBonus))
+            {
+                MessageBox.Show("Yield Bonus must be a number.", "Error");
+                return;
+            }
+
+            try
+            {
+                SalaryPayment p = new SalaryPayment();
+                p.WorkerId = Convert.ToInt32(cmbWorker.SelectedValue);
+                p.Month = month;
+                p.DaysWorked = daysWorked;
+                p.DailyRate = dailyRate;
+                p.YieldBonus = yieldBonus;
+                p.TotalAmount = p.CalculateTotal();   
+                p.PaidDate = dtpPaidDate.Value.Date;
+
+                _repo.Add(p);
+                MessageBox.Show("Salary payment added.", "Success");
+                ClearInputs();
+                LoadSalaries();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
