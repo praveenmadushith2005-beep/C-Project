@@ -1,28 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TeaEstate
+namespace C_projectviva
 {
-    // Standalone entry point for Member 02 — Worker Administration.
-    // Opens straight to this member's screen so it can be built/tested on its own.
-    internal static class Program
+    internal class Program
     {
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            // Shared DatabaseHelper creates + seeds the SQL Server LocalDB database on first launch.
-            try
-            {
-                DatabaseHelper.EnsureDatabase();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Database Error");
-            }
-
-            Application.Run(new WorkerForm());
+            Console.WriteLine("Hello World");
+            Console.ReadLine();
         }
     }
 }
