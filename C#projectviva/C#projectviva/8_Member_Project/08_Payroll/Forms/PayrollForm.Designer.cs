@@ -91,6 +91,7 @@ namespace TeaEstate
             this.grpDetails.TabIndex = 1;
             this.grpDetails.TabStop = false;
             this.grpDetails.Text = "Details";
+
             
 
 
@@ -117,3 +118,57 @@ namespace TeaEstate
             this.lblMonth.Size = new System.Drawing.Size(101, 15);
             this.lblMonth.TabIndex = 2;
             this.lblMonth.Text = "Month (yyyy-MM):";
+
+
+            this.txtMonth.Location = new System.Drawing.Point(130, 62);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Size = new System.Drawing.Size(200, 23);
+            this.txtMonth.TabIndex = 3;
+         
+            
+
+            this.lblDaysWorked.AutoSize = true;
+            this.lblDaysWorked.Location = new System.Drawing.Point(16, 99);
+            this.lblDaysWorked.Name = "lblDaysWorked";
+            this.lblDaysWorked.Size = new System.Drawing.Size(80, 15);
+            this.lblDaysWorked.TabIndex = 4;
+            this.lblDaysWorked.Text = "Days Worked:";
+            
+
+
+            this.txtDaysWorked.Location = new System.Drawing.Point(130, 96);
+            this.txtDaysWorked.Name = "txtDaysWorked";
+            this.txtDaysWorked.Size = new System.Drawing.Size(200, 23);
+            this.txtDaysWorked.TabIndex = 5;
+            
+
+
+            this.lblDailyRate.AutoSize = true;
+            this.lblDailyRate.Location = new System.Drawing.Point(16, 133);
+            this.lblDailyRate.Name = "lblDailyRate";
+            this.lblDailyRate.Size = new System.Drawing.Size(63, 15);
+            this.lblDailyRate.TabIndex = 6;
+            this.lblDailyRate.Text = "Daily Rate:";
+            
+
+
+            this.txtDailyRate.Location = new System.Drawing.Point(130, 130);
+            this.txtDailyRate.Name = "txtDailyRate";
+            this.txtDailyRate.Size = new System.Drawing.Size(200, 23);
+            this.txtDailyRate.TabIndex = 7;
+            
+
+
+            this.lblYieldBonus.AutoSize = true;
+            this.lblYieldBonus.Location = new System.Drawing.Point(16, 167);
+            this.lblYieldBonus.Name = "lblYieldBonus";
+            this.lblYieldBonus.Size = new System.Drawing.Size(75, 15);
+            this.lblYieldBonus.TabIndex = 8;
+            this.lblYieldBonus.Text = "Yield Bonus:";
+            
+
+
+            this.txtYieldBonus.Location = new System.Drawing.Point(130, 164);
+            this.txtYieldBonus.Name = "txtYieldBonus";
+            this.txtYieldBonus.Size = new System.Drawing.Size(200, 23);
+            this.txtYieldBonus.TabIndex = 9;
