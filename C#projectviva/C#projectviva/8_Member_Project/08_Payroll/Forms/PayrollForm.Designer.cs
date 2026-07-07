@@ -307,5 +307,30 @@ namespace TeaEstate
             this.ResumeLayout(false);
         }
 
-
+        
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.GroupBox grpDetails;
+        private System.Windows.Forms.Label lblWorker;
+        private System.Windows.Forms.ComboBox cmbWorker;
+        private System.Windows.Forms.Label lblMonth;
+        private System.Windows.Forms.TextBox txtMonth;
+        private System.Windows.Forms.Label lblDaysWorked;
+        private System.Windows.Forms.TextBox txtDaysWorked;
+        private System.Windows.Forms.Label lblDailyRate;
+        private System.Windows.Forms.TextBox txtDailyRate;
+        private System.Windows.Forms.Label lblYieldBonus;
+        private System.Windows.Forms.TextBox txtYieldBonus;
+        private System.Windows.Forms.Label lblPaidDate;
+        private System.Windows.Forms.DateTimePicker dtpPaidDate;
+        private System.Windows.Forms.Label lblTotalCaption;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridView dgvSalary;
+    }
+}
 
