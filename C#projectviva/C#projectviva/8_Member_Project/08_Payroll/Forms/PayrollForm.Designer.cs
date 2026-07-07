@@ -172,3 +172,61 @@ namespace TeaEstate
             this.txtYieldBonus.Name = "txtYieldBonus";
             this.txtYieldBonus.Size = new System.Drawing.Size(200, 23);
             this.txtYieldBonus.TabIndex = 9;
+
+
+            this.lblPaidDate.AutoSize = true;
+            this.lblPaidDate.Location = new System.Drawing.Point(16, 201);
+            this.lblPaidDate.Name = "lblPaidDate";
+            this.lblPaidDate.Size = new System.Drawing.Size(60, 15);
+            this.lblPaidDate.TabIndex = 10;
+            this.lblPaidDate.Text = "Paid Date:";
+            
+
+
+            this.dtpPaidDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPaidDate.Location = new System.Drawing.Point(130, 198);
+            this.dtpPaidDate.Name = "dtpPaidDate";
+            this.dtpPaidDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpPaidDate.TabIndex = 11;
+            
+
+
+            this.lblTotalCaption.AutoSize = true;
+            this.lblTotalCaption.Location = new System.Drawing.Point(16, 240);
+            this.lblTotalCaption.Name = "lblTotalCaption";
+            this.lblTotalCaption.Size = new System.Drawing.Size(36, 15);
+            this.lblTotalCaption.TabIndex = 12;
+            this.lblTotalCaption.Text = "Total:";
+            
+
+
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
+            this.lblTotal.Location = new System.Drawing.Point(127, 240);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(28, 15);
+            this.lblTotal.TabIndex = 13;
+            this.lblTotal.Text = "0.00";
+            
+
+
+            this.btnCalculate.Location = new System.Drawing.Point(12, 356);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(92, 30);
+            this.btnCalculate.TabIndex = 2;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+           
+
+
+
+            this.btnAdd.Location = new System.Drawing.Point(112, 356);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(92, 30);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+
