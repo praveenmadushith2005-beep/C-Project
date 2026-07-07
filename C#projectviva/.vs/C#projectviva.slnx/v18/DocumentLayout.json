@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\",
+  "WorkspaceRootPath": "C:\\Users\\Aser\\Documents\\GitHub\\C-Project\\C#projectviva\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BFF2851-1385-4FD2-8E8F-CD7D671DE1E5}|C#projectviva\\C#projectviva.csproj|c:\\users\\msi\\documents\\github\\c-project\\c#projectviva\\c#projectviva\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFF2851-1385-4FD2-8E8F-CD7D671DE1E5}|C#projectviva\\C#projectviva.csproj|solutionrelative:c#projectviva\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,13 +20,11 @@
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\Program.cs",
-              "RelativeDocumentMoniker": "C#projectviva\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\Program.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\Program.cs",
-              "RelativeToolTip": "C#projectviva\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T16:32:51.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T16:32:51.426Z"
             }
           ]
         }
