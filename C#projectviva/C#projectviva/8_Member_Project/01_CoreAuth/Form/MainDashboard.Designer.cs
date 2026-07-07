@@ -17,60 +17,64 @@ namespace TeaEstate
 
         private void InitializeComponent()
         {
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblHeader = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.pnlHeader.SuspendLayout();
-            this.SuspendLayout();
-            //
+            pnlHeader = new Panel();
+            lblHeader = new Label();
+            lblWelcome = new Label();
+            pnlHeader.SuspendLayout();
+            SuspendLayout();
+            // 
             // pnlHeader
-            //
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
-            this.pnlHeader.Controls.Add(this.lblHeader);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(404, 46);
-            this.pnlHeader.TabIndex = 0;
-            //
+            // 
+            pnlHeader.BackColor = Color.FromArgb(34, 139, 34);
+            pnlHeader.Controls.Add(lblHeader);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Margin = new Padding(3, 4, 3, 4);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(462, 61);
+            pnlHeader.TabIndex = 0;
+            // 
             // lblHeader
-            //
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.ForeColor = System.Drawing.Color.White;
-            this.lblHeader.Location = new System.Drawing.Point(12, 8);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(104, 25);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Dashboard";
-            //
+            // 
+            lblHeader.AutoSize = true;
+            lblHeader.Font = new Font("Segoe UI", 13.5F, FontStyle.Bold);
+            lblHeader.ForeColor = Color.White;
+            lblHeader.Location = new Point(14, 11);
+            lblHeader.Name = "lblHeader";
+            lblHeader.Size = new Size(130, 31);
+            lblHeader.TabIndex = 0;
+            lblHeader.Text = "Dashboard";
+            // 
             // lblWelcome
-            //
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblWelcome.Location = new System.Drawing.Point(20, 58);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(72, 19);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Welcome";
-            //
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblWelcome.Location = new Point(23, 77);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(84, 23);
+            lblWelcome.TabIndex = 1;
+            lblWelcome.Text = "Welcome";
+            lblWelcome.Click += lblWelcome_Click;
+            // 
             // MainDashboard
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 540);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "MainDashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tea Estate — Dashboard";
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(462, 720);
+            Controls.Add(lblWelcome);
+            Controls.Add(pnlHeader);
+            Font = new Font("Segoe UI", 9F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            Name = "MainDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Tea Estate — Dashboard";
+            Load += MainDashboard_Load;
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

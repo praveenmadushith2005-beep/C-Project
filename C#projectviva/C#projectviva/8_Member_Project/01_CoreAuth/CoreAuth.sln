@@ -1,9 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.8.11925.187 insiders
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAuth", "CoreAuth.csproj", "{3B012624-705E-4BCF-84C1-8BB2FA150001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerAdmin", "..\02_WorkerAdmin\WorkerAdmin.csproj", "{A2DE621F-B31C-6CAF-6BB2-80C376123689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +16,10 @@ Global
 		{3B012624-705E-4BCF-84C1-8BB2FA150001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B012624-705E-4BCF-84C1-8BB2FA150001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B012624-705E-4BCF-84C1-8BB2FA150001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DE621F-B31C-6CAF-6BB2-80C376123689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DE621F-B31C-6CAF-6BB2-80C376123689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DE621F-B31C-6CAF-6BB2-80C376123689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DE621F-B31C-6CAF-6BB2-80C376123689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 using System;
+using TeaEstate;
 
 namespace TeaEstate
 {
@@ -55,7 +56,7 @@ namespace TeaEstate
 
             // Manager: everything. Supervisor: Attendance/Sections/Yield. Officer: Processing.
             if (isManager)
-                AddButton("Workers", (s, e) => new WorkerForm().Show());
+                AddButton("Workers", (s, e) => new TeaEstate.WorkerForm().Show());
 
             if (isManager || isSupervisor)
             {
@@ -115,6 +116,16 @@ namespace TeaEstate
             {
                 Application.Exit();
             }
+        }
+
+        private void MainDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
