@@ -166,7 +166,7 @@
               "RelativeDocumentMoniker": "C#projectviva\\src\\TeaEstateApp\\Program.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\src\\TeaEstateApp\\Program.cs",
               "RelativeToolTip": "C#projectviva\\src\\TeaEstateApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-07T17:22:02.274Z",
               "EditorCaption": ""
@@ -270,10 +270,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Auth\\Session.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Auth\\Session.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Auth\\Session.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:51:02.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:51:02.031Z"
             },
             {
               "$type": "Document",
@@ -283,10 +281,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Models\\Person.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Models\\Person.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Models\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:15.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:15.991Z"
             },
             {
               "$type": "Document",
@@ -354,10 +350,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "Worker.cs",
@@ -365,10 +357,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Worker.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Worker.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Worker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:38.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:38.935Z"
             },
             {
               "$type": "Document",
@@ -379,7 +369,8 @@
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\_run.bat",
               "RelativeToolTip": "_run.bat",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000614|",
-              "WhenOpened": "2026-07-07T16:02:26.611Z"
+              "WhenOpened": "2026-07-07T16:02:26.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -389,10 +380,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\C#projectviva.csproj",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\C#projectviva.csproj",
               "RelativeToolTip": "C#projectviva\\C#projectviva.csproj",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-07-07T16:09:30.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T16:09:30.38Z"
             },
             {
               "$type": "Document",
@@ -415,10 +404,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Database\\DatabaseHelper.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Database\\DatabaseHelper.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Database\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:51:51.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:51:51.679Z"
             },
             {
               "$type": "Document",
@@ -454,10 +441,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Supervisor.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Supervisor.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Supervisor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:36.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:36.829Z"
             },
             {
               "$type": "Document",
@@ -467,10 +452,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Manager.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Manager.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Models\\Manager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:35.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:35.431Z"
             },
             {
               "$type": "Document",
@@ -480,10 +463,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Forms\\WorkerForm.Designer.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Forms\\WorkerForm.Designer.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Forms\\WorkerForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:32.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:32.846Z"
             },
             {
               "$type": "Document",
@@ -493,10 +474,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Forms\\WorkerForm.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Forms\\WorkerForm.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Forms\\WorkerForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:30.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:30.993Z"
             },
             {
               "$type": "Document",
@@ -506,10 +485,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Data\\WorkerRepository.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Data\\WorkerRepository.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Data\\WorkerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:24.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:24.253Z"
             },
             {
               "$type": "Document",
@@ -519,10 +496,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Program.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Program.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:40.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:40.286Z"
             },
             {
               "$type": "Document",
@@ -532,10 +507,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Models\\User.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Models\\User.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:19.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:19.546Z"
             },
             {
               "$type": "Document",
@@ -545,10 +518,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Interfaces\\IReportGenerator.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Interfaces\\IReportGenerator.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Interfaces\\IReportGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:05.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:05.035Z"
             },
             {
               "$type": "Document",
@@ -558,10 +529,8 @@
               "RelativeDocumentMoniker": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Interfaces\\IDataManager.cs",
               "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\C-Project\\C#projectviva\\C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Interfaces\\IDataManager.cs",
               "RelativeToolTip": "C#projectviva\\8_Member_Project\\02_WorkerAdmin\\Core\\Interfaces\\IDataManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:52:02.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T09:52:02.659Z"
             },
             {
               "$type": "Document",
