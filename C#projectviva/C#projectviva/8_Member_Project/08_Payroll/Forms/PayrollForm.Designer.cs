@@ -230,3 +230,82 @@ namespace TeaEstate
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 
+
+           
+            this.btnDelete.Location = new System.Drawing.Point(212, 356);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(92, 30);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+           
+
+
+
+            this.btnClear.Location = new System.Drawing.Point(312, 356);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(92, 30);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+           
+
+
+            this.btnRefresh.Location = new System.Drawing.Point(412, 356);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(92, 30);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            
+
+
+            this.dgvSalary.AllowUserToAddRows = false;
+            this.dgvSalary.AllowUserToDeleteRows = false;
+            this.dgvSalary.AllowUserToResizeRows = false;
+            this.dgvSalary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalary.Location = new System.Drawing.Point(12, 396);
+            this.dgvSalary.MultiSelect = false;
+            this.dgvSalary.Name = "dgvSalary";
+            this.dgvSalary.ReadOnly = true;
+            this.dgvSalary.RowHeadersVisible = false;
+            this.dgvSalary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSalary.Size = new System.Drawing.Size(756, 132);
+            this.dgvSalary.TabIndex = 7;
+            this.dgvSalary.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvSalary.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalary_CellClick);
+            
+
+
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(780, 540);
+            this.Controls.Add(this.dgvSalary);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCalculate);
+            this.Controls.Add(this.grpDetails);
+            this.Controls.Add(this.pnlHeader);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "PayrollForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tea Estate — Payroll / Salary";
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.grpDetails.ResumeLayout(false);
+            this.grpDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).EndInit();
+            this.ResumeLayout(false);
+        }
+
+
+
