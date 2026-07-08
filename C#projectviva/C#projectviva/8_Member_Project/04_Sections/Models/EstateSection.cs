@@ -1,28 +1,12 @@
-using System;
-
-namespace C_projectviva.Sections
+namespace TeaEstate
 {
-    // Member 04 — Sections module.
-    // One estate section = a named area of the tea estate.
-    // DB table (per TEAM_TASKS.md): EstateSection
+    // Member 04 — model for one estate section (a named block of the tea estate).
+    // OOP: Encapsulation — data is exposed through public properties.
+    // Maps to the EstateSection table (SectionID PK IDENTITY, SectionName, Area DECIMAL).
     public class EstateSection
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal AreaHectares { get; set; }
-
-        public EstateSection() { }
-
-        public EstateSection(int id, string name, decimal areaHectares)
-        {
-            Id = id;
-            Name = name;
-            AreaHectares = areaHectares;
-        }
-
-        public override string ToString()
-        {
-            return string.Format("{0}: {1} ({2} ha)", Id, Name, AreaHectares);
-        }
+        public int SectionID { get; set; }       // primary key (auto-number in the DB)
+        public string SectionName { get; set; }   // e.g. "North Field"
+        public decimal Area { get; set; }          // size of the section (in hectares)
     }
 }
