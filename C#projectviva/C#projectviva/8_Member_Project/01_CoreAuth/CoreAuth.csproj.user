@@ -2,16 +2,13 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Form\ChangePasswordForm.cs">
+    <Compile Update="Forms\ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form\LoginForm.cs">
+    <Compile Update="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form\MainDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form\_StandalonePlaceholders.cs">
+    <Compile Update="Forms\MainDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

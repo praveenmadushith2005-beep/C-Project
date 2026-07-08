@@ -2,8 +2,10 @@ namespace TeaEstate
 {
     partial class ProcessingForm
     {
+      
         private System.ComponentModel.IContainer components = null;
 
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -15,6 +17,8 @@ namespace TeaEstate
 
         #region Windows Form Designer generated code
 
+        // Required method for Designer support — do not modify the contents of this
+        // method with the code editor; edit it on the design surface instead.
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -35,6 +39,9 @@ namespace TeaEstate
             this.grpDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcessing)).BeginInit();
             this.SuspendLayout();
+            //
+            // pnlHeader
+            //
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -42,6 +49,9 @@ namespace TeaEstate
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(780, 46);
             this.pnlHeader.TabIndex = 0;
+            //
+            // lblHeader
+            //
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
             this.lblHeader.ForeColor = System.Drawing.Color.White;
@@ -50,6 +60,9 @@ namespace TeaEstate
             this.lblHeader.Size = new System.Drawing.Size(168, 25);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Factory Processing";
+            //
+            // grpDetails
+            //
             this.grpDetails.Controls.Add(this.lblYield);
             this.grpDetails.Controls.Add(this.cmbYield);
             this.grpDetails.Controls.Add(this.lblDate);
@@ -62,41 +75,59 @@ namespace TeaEstate
             this.grpDetails.TabIndex = 1;
             this.grpDetails.TabStop = false;
             this.grpDetails.Text = "Details";
+            //
+            // lblYield
+            //
             this.lblYield.AutoSize = true;
             this.lblYield.Location = new System.Drawing.Point(16, 30);
             this.lblYield.Name = "lblYield";
             this.lblYield.Size = new System.Drawing.Size(94, 15);
             this.lblYield.TabIndex = 0;
             this.lblYield.Text = "Raw Yield Batch:";
+            //
+            // cmbYield
+            //
             this.cmbYield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYield.Location = new System.Drawing.Point(150, 27);
             this.cmbYield.Name = "cmbYield";
             this.cmbYield.Size = new System.Drawing.Size(260, 23);
             this.cmbYield.TabIndex = 1;
+            //
+            // lblDate
+            //
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(16, 64);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(95, 15);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Processing Date:";
-            
+            //
+            // dtpDate
+            //
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(150, 61);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(190, 23);
             this.dtpDate.TabIndex = 3;
+            //
+            // lblProcessed
+            //
             this.lblProcessed.AutoSize = true;
             this.lblProcessed.Location = new System.Drawing.Point(16, 98);
             this.lblProcessed.Name = "lblProcessed";
             this.lblProcessed.Size = new System.Drawing.Size(108, 15);
             this.lblProcessed.TabIndex = 4;
             this.lblProcessed.Text = "Processed Qty (kg):";
-            
-            
+            //
+            // txtProcessed
+            //
             this.txtProcessed.Location = new System.Drawing.Point(150, 95);
             this.txtProcessed.Name = "txtProcessed";
             this.txtProcessed.Size = new System.Drawing.Size(190, 23);
             this.txtProcessed.TabIndex = 5;
+            //
+            // btnAdd
+            //
             this.btnAdd.Location = new System.Drawing.Point(12, 228);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 30);
@@ -104,7 +135,9 @@ namespace TeaEstate
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            
+            //
+            // btnDelete
+            //
             this.btnDelete.Location = new System.Drawing.Point(112, 228);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(92, 30);
@@ -112,8 +145,9 @@ namespace TeaEstate
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            
-            
+            //
+            // btnClear
+            //
             this.btnClear.Location = new System.Drawing.Point(212, 228);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(92, 30);
@@ -121,6 +155,9 @@ namespace TeaEstate
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            //
+            // btnRefresh
+            //
             this.btnRefresh.Location = new System.Drawing.Point(312, 228);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(92, 30);
@@ -128,7 +165,9 @@ namespace TeaEstate
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            
+            //
+            // dgvProcessing
+            //
             this.dgvProcessing.AllowUserToAddRows = false;
             this.dgvProcessing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
@@ -145,6 +184,9 @@ namespace TeaEstate
             this.dgvProcessing.TabIndex = 6;
             this.dgvProcessing.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvProcessing.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcessing_CellClick);
+            //
+            // ProcessingForm
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 540);

@@ -4,10 +4,10 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
-
+    
     public class AttendanceRepository : IDataManager
     {
-
+        
         public DataTable GetAll()
         {
             string sql =
@@ -18,6 +18,7 @@ namespace TeaEstate
             return DatabaseHelper.ExecuteQuery(sql);
         }
 
+        
         public void Add(Attendance attendance)
         {
             string sql =
@@ -27,13 +28,14 @@ namespace TeaEstate
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@w", attendance.WorkerID),
-                new SqlParameter("@d", attendance.Date.Date),
+                new SqlParameter("@d", attendance.Date.Date),  
                 new SqlParameter("@s", attendance.Status)
             };
 
             DatabaseHelper.ExecuteNonQuery(sql, parameters);
         }
 
+        
         public void DeleteById(int id)
         {
             string sql = "DELETE FROM Attendance WHERE AttendanceID = @id";
@@ -44,7 +46,7 @@ namespace TeaEstate
             DatabaseHelper.ExecuteNonQuery(sql, parameters);
         }
 
-
+        
         public DataTable GetByDate(DateTime d)
         {
             string sql =
@@ -61,6 +63,7 @@ namespace TeaEstate
             return DatabaseHelper.ExecuteQuery(sql, parameters);
         }
 
+        
         public DataTable MonthlySummary(int month, int year)
         {
             string sql =

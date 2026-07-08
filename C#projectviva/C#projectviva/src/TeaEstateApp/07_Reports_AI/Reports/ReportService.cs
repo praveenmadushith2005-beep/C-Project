@@ -2,16 +2,26 @@ using System.Data;
 
 namespace TeaEstate
 {
+    // Member 07 — produces the management reports for the estate.
+    // OOP: implements the shared IReportGenerator interface so the Reports screen
+    // can treat it like any other report producer.
+    // Each report method returns a DataTable ready to bind to a DataGridView.
+    // Remember: 'Date' is a SQL reserved word, so it is always written [Date].
     public class ReportService : IReportGenerator
     {
+        // IReportGenerator: a friendly title for the default report.
         public string ReportTitle
         {
             get { return "Worker Performance"; }
         }
+
+        // IReportGenerator: the default report = worker performance.
         public DataTable GenerateReport()
         {
             return WorkerPerformanceReport();
         }
+
+        // 1) Worker performance — each worker and the total yield (kg) they have picked.
         public DataTable WorkerPerformanceReport()
         {
             string sql =
@@ -24,6 +34,8 @@ namespace TeaEstate
 
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+        // 2) Attendance history — worker, date and status, newest first.
         public DataTable AttendanceHistoryReport()
         {
             string sql =
@@ -36,6 +48,8 @@ namespace TeaEstate
 
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+        // 3) Yield by section — each estate section and the total yield (kg) from it.
         public DataTable YieldBySectionReport()
         {
             string sql =
@@ -48,6 +62,9 @@ namespace TeaEstate
 
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+        // 4) Processing log — processing records joined to their raw yield batch,
+        //    showing raw leaf in vs made tea out.
         public DataTable ProcessingLogReport()
         {
             string sql =

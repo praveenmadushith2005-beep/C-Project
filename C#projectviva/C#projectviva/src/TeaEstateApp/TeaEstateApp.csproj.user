@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="01_Core_Auth\Forms\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="01_Core_Auth\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="01_Core_Auth\Forms\MainDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="02_WorkerAdmin\Forms\WorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="03_Attendance\Forms\AttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="04_Sections\Forms\SectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="05_Yield\Forms\YieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="06_Factory_Processing\Forms\ProcessingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="07_Reports_AI\Forms\ForecastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="07_Reports_AI\Forms\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="08_Payroll\Forms\PayrollForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -9,22 +9,22 @@ namespace TeaEstate
         
         private readonly SalaryRepository _repo = new SalaryRepository();
 
-       
+        
         private int _selectedId = 0;
 
- 
+        
         private const decimal BonusPerKg = 2.0m;
 
-  
+        
         public PayrollForm()
         {
-            InitializeComponent();   
-            LoadWorkers();           
+            InitializeComponent();  
+            LoadWorkers();          
             dtpPaidDate.Value = DateTime.Today;
-            LoadSalaries();          
+            LoadSalaries();        
         }
 
-       
+        
         private void LoadWorkers()
         {
             try
@@ -32,7 +32,7 @@ namespace TeaEstate
                 cmbWorker.DataSource = _repo.GetWorkers();
                 cmbWorker.DisplayMember = "Name";
                 cmbWorker.ValueMember = "WorkerID";
-                cmbWorker.SelectedIndex = -1;   
+                cmbWorker.SelectedIndex = -1;  
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace TeaEstate
             }
         }
 
-       
+     
         private void LoadSalaries()
         {
             try
@@ -53,7 +53,7 @@ namespace TeaEstate
             }
         }
 
-
+      
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             if (cmbWorker.SelectedValue == null)
@@ -91,17 +91,17 @@ namespace TeaEstate
             }
         }
 
-        
+       
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+           
             if (cmbWorker.SelectedValue == null)
             {
                 MessageBox.Show("Please select a worker first.", "Error");
                 return;
             }
 
-
+            
             string month = txtMonth.Text.Trim();
             if (month.Length == 0)
             {
@@ -109,7 +109,7 @@ namespace TeaEstate
                 return;
             }
 
-            
+           
             int daysWorked;
             if (!int.TryParse(txtDaysWorked.Text.Trim(), out daysWorked))
             {
@@ -151,8 +151,8 @@ namespace TeaEstate
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-        }        }
-        
+        }
+
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -179,19 +179,20 @@ namespace TeaEstate
             }
         }
 
-        
+       
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearInputs();
         }
 
-   
+        
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             ClearInputs();
             LoadSalaries();
         }
 
+        
         private void dgvSalary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return; 
@@ -202,7 +203,7 @@ namespace TeaEstate
             object idValue = row.Cells["PaymentID"].Value;
             _selectedId = (idValue == null || idValue == DBNull.Value) ? 0 : Convert.ToInt32(idValue);
 
-         
+            
             string workerName = SafeText(row.Cells["WorkerName"].Value);
             cmbWorker.SelectedValue = WorkerIdForName(workerName);
 
@@ -211,7 +212,7 @@ namespace TeaEstate
             txtDailyRate.Text = SafeText(row.Cells["DailyRate"].Value);
             txtYieldBonus.Text = SafeText(row.Cells["YieldBonus"].Value);
 
-          
+            
             object paid = row.Cells["PaidDate"].Value;
             if (paid != null && paid != DBNull.Value)
             {
@@ -221,6 +222,7 @@ namespace TeaEstate
             RecomputeTotal();
         }
 
+        
         private void RecomputeTotal()
         {
             int days;
@@ -239,7 +241,7 @@ namespace TeaEstate
             lblTotal.Text = temp.CalculateTotal().ToString("0.00");
         }
 
-    
+        
         private int WorkerIdForName(string name)
         {
             DataTable dt = cmbWorker.DataSource as DataTable;
@@ -268,11 +270,10 @@ namespace TeaEstate
             lblTotal.Text = "0.00";
         }
 
-        
+       
         private string SafeText(object value)
         {
             return value == null || value == DBNull.Value ? "" : value.ToString();
         }
     }
 }
-

@@ -3,8 +3,10 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
+   
     public class ProcessingRepository : IDataManager
     {
+        
         public DataTable GetAll()
         {
             string sql =
@@ -34,6 +36,7 @@ namespace TeaEstate
             DatabaseHelper.ExecuteNonQuery(sql, parameters);
         }
 
+        
         public void DeleteById(int id)
         {
             string sql = "DELETE FROM ProcessingRecord WHERE ProcessID = @id";

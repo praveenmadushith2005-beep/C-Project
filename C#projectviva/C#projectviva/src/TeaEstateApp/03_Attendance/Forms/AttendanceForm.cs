@@ -4,24 +4,29 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
+   
     public partial class AttendanceForm : Form
     {
+        
         private readonly AttendanceRepository _repo = new AttendanceRepository();
 
         public AttendanceForm()
         {
             InitializeComponent();   
 
-            SetupRuntime();          
-            LoadWorkers();           
+            SetupRuntime();         
+            LoadWorkers();          
             ShowSelectedDay();       
         }
 
+       
         private void SetupRuntime()
         {
+            
             cmbStatus.Items.AddRange(new object[] { "Present", "Absent", "Leave" });
-            cmbStatus.SelectedIndex = 0; 
+            cmbStatus.SelectedIndex = 0;
 
+            
             cmbMonth.Items.AddRange(new object[]
             {
                 "January", "February", "March", "April", "May", "June",
@@ -29,6 +34,7 @@ namespace TeaEstate
             });
             cmbMonth.SelectedIndex = DateTime.Now.Month - 1; 
 
+            
             int thisYear = DateTime.Now.Year;
             for (int y = thisYear - 5; y <= thisYear + 1; y++)
             {
@@ -37,6 +43,7 @@ namespace TeaEstate
             cmbYear.SelectedItem = thisYear; 
         }
 
+       
         private void LoadWorkers()
         {
             try
@@ -45,8 +52,8 @@ namespace TeaEstate
                     "SELECT WorkerID, Name FROM Worker ORDER BY Name");
 
                 cmbWorker.DataSource = workers;
-                cmbWorker.DisplayMember = "Name";    
-                cmbWorker.ValueMember = "WorkerID";   
+                cmbWorker.DisplayMember = "Name";     
+                cmbWorker.ValueMember = "WorkerID";    
             }
             catch (Exception ex)
             {
@@ -54,8 +61,10 @@ namespace TeaEstate
             }
         }
 
+        
         private void btnMark_Click(object sender, EventArgs e)
         {
+            
             if (cmbWorker.SelectedValue == null)
             {
                 MessageBox.Show("Please select a worker.", "Validation");
@@ -77,7 +86,7 @@ namespace TeaEstate
                 _repo.Add(record);
                 MessageBox.Show("Attendance marked.", "Success");
 
-                ShowSelectedDay();
+                ShowSelectedDay(); 
             }
             catch (Exception ex)
             {
@@ -85,11 +94,13 @@ namespace TeaEstate
             }
         }
 
+        
         private void btnShowDay_Click(object sender, EventArgs e)
         {
             ShowSelectedDay();
         }
 
+        
         private void ShowSelectedDay()
         {
             try
@@ -103,11 +114,12 @@ namespace TeaEstate
             }
         }
 
+        
         private void btnMonthlySummary_Click(object sender, EventArgs e)
         {
             try
             {
-                int month = cmbMonth.SelectedIndex + 1; // January = 1
+                int month = cmbMonth.SelectedIndex + 1;
                 int year = Convert.ToInt32(cmbYear.SelectedItem);
 
                 dgvAttendance.DataSource = _repo.MonthlySummary(month, year);

@@ -1,6 +1,6 @@
 namespace TeaEstate
 {
-   
+  
     public class User
     {
         public int UserId { get; set; }

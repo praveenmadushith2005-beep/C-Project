@@ -4,15 +4,15 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
-    
+ 
     public static class DatabaseHelper
     {
-        
+       
         public static string ConnectionString =>
             "Server=(localdb)\\MSSQLLocalDB;Database=TeaEstateDB;" +
             "Trusted_Connection=True;TrustServerCertificate=True;";
 
-        
+       
         private static string MasterConnectionString =>
             "Server=(localdb)\\MSSQLLocalDB;Database=master;" +
             "Trusted_Connection=True;TrustServerCertificate=True;";
@@ -22,7 +22,7 @@ namespace TeaEstate
             return new SqlConnection(ConnectionString);
         }
 
-       
+        
         public static DataTable ExecuteQuery(string sql, params SqlParameter[] parameters)
         {
             using (SqlConnection con = GetConnection())
@@ -50,7 +50,7 @@ namespace TeaEstate
             }
         }
 
-        
+       
         public static object ExecuteScalar(string sql, params SqlParameter[] parameters)
         {
             using (SqlConnection con = GetConnection())
@@ -76,7 +76,7 @@ namespace TeaEstate
                 }
             }
 
-           
+            
             using (SqlConnection con = GetConnection())
             {
                 con.Open();
@@ -95,7 +95,6 @@ namespace TeaEstate
         }
 
         
-
         private const string CreateAndSeedSql = @"
 CREATE TABLE Worker (
     WorkerID  INT IDENTITY(1,1) PRIMARY KEY,
@@ -177,4 +176,3 @@ INSERT INTO SalaryPayment (WorkerID, [Month], DaysWorked, DailyRate, YieldBonus,
 ";
     }
 }
-

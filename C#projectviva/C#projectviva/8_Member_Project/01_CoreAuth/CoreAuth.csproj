@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -9,9 +9,15 @@
     <AssemblyName>CoreAuth</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\02_WorkerAdmin\WorkerAdmin.csproj" />
+    <ProjectReference Include="..\03_Attendance\Attendance.csproj" />
+    <ProjectReference Include="..\04_Sections\Sections.csproj" />
+    <ProjectReference Include="..\05_Yield\Yield.csproj" />
+    <ProjectReference Include="..\06_FactoryProcessing\FactoryProcessing.csproj" />
+    <ProjectReference Include="..\07_Reports_AI\ReportsAI.csproj" />
+    <ProjectReference Include="..\08_Payroll\Payroll.csproj" />
   </ItemGroup>
 </Project>

@@ -4,29 +4,15 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
-    // Member 01 — shared database access for the WHOLE app (Microsoft SQL Server).
-    //
-    // ENGINE: SQL Server LocalDB, database name "TeaEstateDB".
-    //   LocalDB is installed automatically with Visual Studio, so every team
-    //   member already has it — there is nothing extra to install.
-    //
-    // SETUP: You do NOT have to run any SQL by hand. EnsureDatabase() (called once
-    //   from Program.Main) creates the TeaEstateDB database, all its tables and the
-    //   sample data the first time the app starts. The same schema is also kept as
-    //   plain .sql scripts in the /database folder for the report / SSMS marking.
-    //
-    // CONTRACT: every other module does ALL of its database work through the three
-    //   helper methods below (ExecuteQuery / ExecuteNonQuery / ExecuteScalar) using
-    //   SqlParameter — never its own connection string. (See CONTRACTS.md.)
+   
     public static class DatabaseHelper
     {
-        // The database. (localdb)\MSSQLLocalDB is the default LocalDB instance.
-        // TrustServerCertificate=True keeps LocalDB happy with the newer SqlClient.
+        
         public static string ConnectionString =>
             "Server=(localdb)\\MSSQLLocalDB;Database=TeaEstateDB;" +
             "Trusted_Connection=True;TrustServerCertificate=True;";
 
-        // 'master' is used only to CREATE the database the very first time.
+       
         private static string MasterConnectionString =>
             "Server=(localdb)\\MSSQLLocalDB;Database=master;" +
             "Trusted_Connection=True;TrustServerCertificate=True;";
@@ -36,7 +22,7 @@ namespace TeaEstate
             return new SqlConnection(ConnectionString);
         }
 
-        // Runs a SELECT and returns the rows as a DataTable (easy to bind to a DataGridView).
+       
         public static DataTable ExecuteQuery(string sql, params SqlParameter[] parameters)
         {
             using (SqlConnection con = GetConnection())
@@ -52,7 +38,7 @@ namespace TeaEstate
             }
         }
 
-        // Runs INSERT / UPDATE / DELETE and returns how many rows changed.
+       
         public static int ExecuteNonQuery(string sql, params SqlParameter[] parameters)
         {
             using (SqlConnection con = GetConnection())
@@ -64,7 +50,7 @@ namespace TeaEstate
             }
         }
 
-        // Runs a query that returns a single value (e.g. COUNT(*), or one id).
+        
         public static object ExecuteScalar(string sql, params SqlParameter[] parameters)
         {
             using (SqlConnection con = GetConnection())
@@ -76,11 +62,10 @@ namespace TeaEstate
             }
         }
 
-        // Called once at startup. Creates the database + tables + sample data the
-        // first time only. Safe to call on every run.
+        
         public static void EnsureDatabase()
         {
-            // 1) Create the TeaEstateDB database if it does not exist yet.
+          
             using (SqlConnection master = new SqlConnection(MasterConnectionString))
             {
                 master.Open();
@@ -91,7 +76,7 @@ namespace TeaEstate
                 }
             }
 
-            // 2) Create the tables + seed data only if the [User] table is missing.
+           
             using (SqlConnection con = GetConnection())
             {
                 con.Open();
@@ -99,7 +84,7 @@ namespace TeaEstate
                 using (SqlCommand check = new SqlCommand("SELECT OBJECT_ID('[User]','U');", con))
                 {
                     object result = check.ExecuteScalar();
-                    if (result != null && result != DBNull.Value) return; // already set up
+                    if (result != null && result != DBNull.Value) return; 
                 }
 
                 using (SqlCommand setup = new SqlCommand(CreateAndSeedSql, con))
@@ -109,8 +94,7 @@ namespace TeaEstate
             }
         }
 
-        // Schema + sample data (T-SQL). Reserved words User and Date are bracketed.
-        // No GO separators — SqlCommand runs the whole batch as one statement list.
+        
         private const string CreateAndSeedSql = @"
 CREATE TABLE Worker (
     WorkerID  INT IDENTITY(1,1) PRIMARY KEY,

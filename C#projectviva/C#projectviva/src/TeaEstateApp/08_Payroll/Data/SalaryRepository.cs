@@ -7,7 +7,7 @@ namespace TeaEstate
     
     public class SalaryRepository : IDataManager
     {
-        
+       
         public DataTable GetAll()
         {
             string sql =
@@ -19,6 +19,7 @@ namespace TeaEstate
             return DatabaseHelper.ExecuteQuery(sql);
         }
 
+      
         public void Add(SalaryPayment p)
         {
             string sql =
@@ -48,13 +49,14 @@ namespace TeaEstate
             DatabaseHelper.ExecuteNonQuery(sql, prms);
         }
 
-        
+       
         public DataTable GetWorkers()
         {
             string sql = "SELECT WorkerID, Name FROM Worker ORDER BY Name";
             return DatabaseHelper.ExecuteQuery(sql);
         }
 
+        
         public int CountPresentDays(int workerId, string month)
         {
             string sql =

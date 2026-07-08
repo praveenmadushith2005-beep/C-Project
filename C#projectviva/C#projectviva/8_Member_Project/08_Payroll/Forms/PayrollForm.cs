@@ -3,28 +3,28 @@ using System.Data;
 
 namespace TeaEstate
 {
-   
+    
     public partial class PayrollForm : Form
     {
-        
+   
         private readonly SalaryRepository _repo = new SalaryRepository();
 
-       
+        
         private int _selectedId = 0;
 
- 
+        
         private const decimal BonusPerKg = 2.0m;
 
-  
+        
         public PayrollForm()
         {
-            InitializeComponent();   
+            InitializeComponent();  
             LoadWorkers();           
             dtpPaidDate.Value = DateTime.Today;
-            LoadSalaries();          
+            LoadSalaries();        
         }
 
-       
+        
         private void LoadWorkers()
         {
             try
@@ -40,7 +40,7 @@ namespace TeaEstate
             }
         }
 
-       
+     
         private void LoadSalaries()
         {
             try
@@ -53,7 +53,7 @@ namespace TeaEstate
             }
         }
 
-
+        
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             if (cmbWorker.SelectedValue == null)
@@ -82,7 +82,7 @@ namespace TeaEstate
                 decimal suggestedBonus = yield * BonusPerKg;
                 txtYieldBonus.Text = suggestedBonus.ToString("0.00");
 
-                
+               
                 RecomputeTotal();
             }
             catch (Exception ex)
@@ -91,7 +91,7 @@ namespace TeaEstate
             }
         }
 
-        
+      
         private void btnAdd_Click(object sender, EventArgs e)
         {
             
@@ -101,7 +101,7 @@ namespace TeaEstate
                 return;
             }
 
-
+           
             string month = txtMonth.Text.Trim();
             if (month.Length == 0)
             {
@@ -151,8 +151,8 @@ namespace TeaEstate
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-        }        }
-        
+        }
+
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -185,24 +185,25 @@ namespace TeaEstate
             ClearInputs();
         }
 
-   
+        
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             ClearInputs();
             LoadSalaries();
         }
 
+        
         private void dgvSalary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return; 
 
             DataGridViewRow row = dgvSalary.Rows[e.RowIndex];
 
-            
+           
             object idValue = row.Cells["PaymentID"].Value;
             _selectedId = (idValue == null || idValue == DBNull.Value) ? 0 : Convert.ToInt32(idValue);
 
-         
+          
             string workerName = SafeText(row.Cells["WorkerName"].Value);
             cmbWorker.SelectedValue = WorkerIdForName(workerName);
 
@@ -211,7 +212,7 @@ namespace TeaEstate
             txtDailyRate.Text = SafeText(row.Cells["DailyRate"].Value);
             txtYieldBonus.Text = SafeText(row.Cells["YieldBonus"].Value);
 
-          
+            
             object paid = row.Cells["PaidDate"].Value;
             if (paid != null && paid != DBNull.Value)
             {
@@ -221,6 +222,7 @@ namespace TeaEstate
             RecomputeTotal();
         }
 
+       
         private void RecomputeTotal()
         {
             int days;
@@ -239,7 +241,7 @@ namespace TeaEstate
             lblTotal.Text = temp.CalculateTotal().ToString("0.00");
         }
 
-    
+        
         private int WorkerIdForName(string name)
         {
             DataTable dt = cmbWorker.DataSource as DataTable;
@@ -255,7 +257,7 @@ namespace TeaEstate
             return 0;
         }
 
-        
+  
         private void ClearInputs()
         {
             _selectedId = 0;
@@ -268,11 +270,10 @@ namespace TeaEstate
             lblTotal.Text = "0.00";
         }
 
-        
+       
         private string SafeText(object value)
         {
             return value == null || value == DBNull.Value ? "" : value.ToString();
         }
     }
 }
-

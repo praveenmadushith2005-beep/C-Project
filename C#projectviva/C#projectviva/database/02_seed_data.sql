@@ -1,14 +1,7 @@
--- =====================================================================
---  Sample data so the app has something to show on first run.
---  Run AFTER 01_create_database.sql.
--- =====================================================================
 USE TeaEstateDB;
 GO
 
--- Login accounts (one per role). Username / Password:
---   admin / admin123        -> Manager
---   supervisor / super123   -> Supervisor
---   officer / officer123    -> ProcessingOfficer
+
 INSERT INTO [User] (Username, Password, Role) VALUES
 ('admin',      'admin123',   'Manager'),
 ('supervisor', 'super123',   'Supervisor'),
@@ -24,7 +17,6 @@ INSERT INTO EstateSection (SectionName, Area) VALUES
 ('Section B',  8.00),
 ('Section C', 15.25);
 
--- Several months of yield so the AI forecast has a trend to learn from.
 INSERT INTO YieldRecord (WorkerID, SectionID, Quantity, [Date]) VALUES
 (1,1,42.5,'2026-01-10'), (2,1,38.0,'2026-01-10'),
 (1,2,40.0,'2026-02-10'), (2,2,45.5,'2026-02-10'),
@@ -41,7 +33,6 @@ INSERT INTO ProcessingRecord (YieldID, ProcessingDate, ProcessedQuantity) VALUES
 (1,'2026-01-11',38.0),
 (2,'2026-01-11',34.0);
 
--- Sample salary payments (Member 08).
 INSERT INTO SalaryPayment (WorkerID, [Month], DaysWorked, DailyRate, YieldBonus, TotalAmount, PaidDate) VALUES
 (1,'2026-05',24,1500.00,500.00,36500.00,'2026-06-01'),
 (2,'2026-05',22,1500.00,300.00,33300.00,'2026-06-01');

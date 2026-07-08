@@ -1,6 +1,6 @@
 namespace TeaEstate
 {
-  
+   
     public abstract class Person
     {
         private string _name;   
@@ -16,8 +16,10 @@ namespace TeaEstate
         public string Address { get; set; }
         public string ContactNo { get; set; }
 
+        
         public abstract string GetRoleDescription();
 
+        
         public virtual string GetSummary()
         {
             return Name + " (" + ContactNo + ")";

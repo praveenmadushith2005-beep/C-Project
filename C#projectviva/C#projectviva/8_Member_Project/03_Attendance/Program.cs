@@ -2,6 +2,7 @@ using System;
 
 namespace TeaEstate
 {
+    
     internal static class Program
     {
         [STAThread]
@@ -10,6 +11,7 @@ namespace TeaEstate
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            
             try
             {
                 DatabaseHelper.EnsureDatabase();

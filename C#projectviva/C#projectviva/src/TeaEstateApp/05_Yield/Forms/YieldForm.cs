@@ -3,29 +3,21 @@ using System.Data;
 
 namespace TeaEstate
 {
-    // Member 05 — screen to record tea-leaf yields and view summaries.
-    //
-    // The visual layout (controls, colours, positions) lives in YieldForm.Designer.cs
-    // so the form opens in the Visual Studio drag-and-drop designer. This file holds
-    // only the behaviour (recording a yield, deleting, and the two summary views).
-    //
-    // Class name + parameterless constructor are fixed because MainDashboard opens this
-    // form by name (new YieldForm()).
+   
     public partial class YieldForm : Form
     {
-        // Repository does all the database work for yields.
+        
         private readonly YieldRepository _repo = new YieldRepository();
 
         public YieldForm()
         {
-            InitializeComponent();   // builds the controls (see YieldForm.Designer.cs)
-            LoadWorkers();           // fill the worker dropdown
-            LoadSections();          // fill the section dropdown
-            LoadYields();            // show existing yield records
+            InitializeComponent();  
+            LoadWorkers();          
+            LoadSections();         
+            LoadYields();            
         }
 
-        // Fill the worker dropdown from the Worker table.
-        // We store WorkerID as the value and the Name as the text the user sees.
+       
         private void LoadWorkers()
         {
             try
@@ -43,7 +35,7 @@ namespace TeaEstate
             }
         }
 
-        // Fill the section dropdown from the EstateSection table.
+        
         private void LoadSections()
         {
             try
@@ -61,7 +53,7 @@ namespace TeaEstate
             }
         }
 
-        // Show all yield records (with worker + section names) in the grid.
+        
         private void LoadYields()
         {
             try
@@ -74,12 +66,12 @@ namespace TeaEstate
             }
         }
 
-        // Record button — validate, build a YieldRecord, then insert.
+        
         private void btnRecord_Click(object sender, EventArgs e)
         {
             try
             {
-                // Make sure a worker and a section are chosen.
+                
                 if (cmbWorker.SelectedValue == null)
                 {
                     MessageBox.Show("Please select a worker.", "Validation");
@@ -91,7 +83,7 @@ namespace TeaEstate
                     return;
                 }
 
-                // Validate the quantity.
+                
                 decimal quantity;
                 if (!decimal.TryParse(txtQuantity.Text.Trim(), out quantity) || quantity <= 0)
                 {
@@ -116,13 +108,12 @@ namespace TeaEstate
             }
         }
 
-        // Delete button — remove the selected yield record.
+       
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                // The grid may currently be showing a summary (which has no YieldID
-                // column), so guard for that before trying to delete.
+                
                 if (dgvYields.CurrentRow == null ||
                     !dgvYields.Columns.Contains("YieldID"))
                 {
@@ -151,19 +142,19 @@ namespace TeaEstate
             }
         }
 
-        // Clear button — reset the quantity input.
+        
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtQuantity.Clear();
         }
 
-        // Refresh button — reload the full yield list back into the grid.
+       
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadYields();
         }
 
-        // Show the "total quantity per section" summary in the grid.
+        
         private void btnTotalBySection_Click(object sender, EventArgs e)
         {
             try
@@ -176,7 +167,7 @@ namespace TeaEstate
             }
         }
 
-        // Show the "total quantity per worker" summary in the grid.
+        
         private void btnTotalByWorker_Click(object sender, EventArgs e)
         {
             try

@@ -3,7 +3,7 @@ namespace TeaEstate
    
     public abstract class Person
     {
-        private string _name;  
+        private string _name;   
 
         public int Id { get; set; }
 
@@ -26,4 +26,3 @@ namespace TeaEstate
         }
     }
 }
-

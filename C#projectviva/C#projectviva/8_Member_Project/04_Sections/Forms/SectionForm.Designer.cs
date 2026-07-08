@@ -2,10 +2,10 @@ namespace TeaEstate
 {
     partial class SectionForm
     {
-        // Required designer variable.
+       
         private System.ComponentModel.IContainer components = null;
 
-        // Clean up any resources being used.
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))

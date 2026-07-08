@@ -4,18 +4,20 @@ using Microsoft.Data.SqlClient;
 
 namespace TeaEstate
 {
-    
+   
     public partial class ProcessingForm : Form
     {
+     
         private readonly ProcessingRepository _repo = new ProcessingRepository();
 
         public ProcessingForm()
         {
-            InitializeComponent();   
-            LoadYields();            
+            InitializeComponent();  
+            LoadYields();           
             LoadGrid();              
         }
 
+       
         private void LoadYields()
         {
             try
@@ -23,6 +25,7 @@ namespace TeaEstate
                 string sql = "SELECT YieldID, Quantity FROM YieldRecord ORDER BY YieldID";
                 DataTable dt = DatabaseHelper.ExecuteQuery(sql);
 
+              
                 if (!dt.Columns.Contains("Display"))
                     dt.Columns.Add("Display", typeof(string));
 
@@ -39,6 +42,7 @@ namespace TeaEstate
             }
         }
 
+      
         private void LoadGrid()
         {
             try
@@ -51,16 +55,19 @@ namespace TeaEstate
             }
         }
 
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+                
                 if (cmbYield.SelectedValue == null)
                 {
                     MessageBox.Show("Please select a yield batch.", "Validation");
                     return;
                 }
 
+            
                 if (string.IsNullOrWhiteSpace(txtProcessed.Text))
                 {
                     MessageBox.Show("Please enter the processed quantity.", "Validation");
@@ -74,6 +81,7 @@ namespace TeaEstate
                     return;
                 }
 
+              
                 ProcessingRecord record = new ProcessingRecord();
                 record.YieldID = Convert.ToInt32(cmbYield.SelectedValue);
                 record.ProcessingDate = dtpDate.Value.Date;
@@ -91,6 +99,7 @@ namespace TeaEstate
             }
         }
 
+       
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -124,16 +133,19 @@ namespace TeaEstate
             }
         }
 
+       
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearInputs();
         }
 
+    
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadGrid();
         }
 
+     
         private void dgvProcessing_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -160,6 +172,7 @@ namespace TeaEstate
             }
         }
 
+      
         private void ClearInputs()
         {
             txtProcessed.Clear();

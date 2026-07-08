@@ -2,8 +2,10 @@ namespace TeaEstate
 {
     partial class AttendanceForm
     {
+        
         private System.ComponentModel.IContainer components = null;
 
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -15,212 +17,272 @@ namespace TeaEstate
 
         #region Windows Form Designer generated code
 
+        // Required method for Designer support — do not modify the contents of this
+        // method with the code editor; edit it on the design surface instead.
         private void InitializeComponent()
         {
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.grpDetails = new System.Windows.Forms.GroupBox();
-            this.lblWorker = new System.Windows.Forms.Label();
-            this.cmbWorker = new System.Windows.Forms.ComboBox();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.btnMark = new System.Windows.Forms.Button();
-            this.btnShowDay = new System.Windows.Forms.Button();
-            this.grpSummary = new System.Windows.Forms.GroupBox();
-            this.lblMonth = new System.Windows.Forms.Label();
-            this.cmbMonth = new System.Windows.Forms.ComboBox();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.cmbYear = new System.Windows.Forms.ComboBox();
-            this.btnMonthlySummary = new System.Windows.Forms.Button();
-            this.lblGrid = new System.Windows.Forms.Label();
-            this.dgvAttendance = new System.Windows.Forms.DataGridView();
-            this.pnlHeader.SuspendLayout();
-            this.grpDetails.SuspendLayout();
-            this.grpSummary.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
-            this.SuspendLayout();
-  
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
-            this.pnlHeader.Controls.Add(this.lblTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(764, 46);
-            this.pnlHeader.TabIndex = 0;
-         
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(12, 8);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(110, 25);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Attendance";
-          
-            this.grpDetails.Controls.Add(this.lblWorker);
-            this.grpDetails.Controls.Add(this.cmbWorker);
-            this.grpDetails.Controls.Add(this.lblDate);
-            this.grpDetails.Controls.Add(this.dtpDate);
-            this.grpDetails.Controls.Add(this.lblStatus);
-            this.grpDetails.Controls.Add(this.cmbStatus);
-            this.grpDetails.Controls.Add(this.btnMark);
-            this.grpDetails.Controls.Add(this.btnShowDay);
-            this.grpDetails.Location = new System.Drawing.Point(12, 56);
-            this.grpDetails.Name = "grpDetails";
-            this.grpDetails.Size = new System.Drawing.Size(360, 170);
-            this.grpDetails.TabIndex = 1;
-            this.grpDetails.TabStop = false;
-            this.grpDetails.Text = "Mark Attendance";
-        
-            this.lblWorker.AutoSize = true;
-            this.lblWorker.Location = new System.Drawing.Point(15, 30);
-            this.lblWorker.Name = "lblWorker";
-            this.lblWorker.Size = new System.Drawing.Size(48, 15);
-            this.lblWorker.TabIndex = 0;
-            this.lblWorker.Text = "Worker:";
-
-            this.cmbWorker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWorker.Location = new System.Drawing.Point(120, 26);
-            this.cmbWorker.Name = "cmbWorker";
-            this.cmbWorker.Size = new System.Drawing.Size(190, 23);
-            this.cmbWorker.TabIndex = 1;
-       
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(15, 64);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(34, 15);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "Date:";
-
-            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(120, 60);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(190, 23);
-            this.dtpDate.TabIndex = 3;
-       
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(15, 98);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(45, 15);
-            this.lblStatus.TabIndex = 4;
-            this.lblStatus.Text = "Status:";
-       
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.Location = new System.Drawing.Point(120, 94);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(190, 23);
-            this.cmbStatus.TabIndex = 5;
-       
-            this.btnMark.Location = new System.Drawing.Point(120, 128);
-            this.btnMark.Name = "btnMark";
-            this.btnMark.Size = new System.Drawing.Size(92, 30);
-            this.btnMark.TabIndex = 6;
-            this.btnMark.Text = "Mark";
-            this.btnMark.UseVisualStyleBackColor = true;
-            this.btnMark.Click += new System.EventHandler(this.btnMark_Click);
-    
-            this.btnShowDay.Location = new System.Drawing.Point(218, 128);
-            this.btnShowDay.Name = "btnShowDay";
-            this.btnShowDay.Size = new System.Drawing.Size(92, 30);
-            this.btnShowDay.TabIndex = 7;
-            this.btnShowDay.Text = "Show Day";
-            this.btnShowDay.UseVisualStyleBackColor = true;
-            this.btnShowDay.Click += new System.EventHandler(this.btnShowDay_Click);
-         
-            this.grpSummary.Controls.Add(this.lblMonth);
-            this.grpSummary.Controls.Add(this.cmbMonth);
-            this.grpSummary.Controls.Add(this.lblYear);
-            this.grpSummary.Controls.Add(this.cmbYear);
-            this.grpSummary.Controls.Add(this.btnMonthlySummary);
-            this.grpSummary.Location = new System.Drawing.Point(384, 56);
-            this.grpSummary.Name = "grpSummary";
-            this.grpSummary.Size = new System.Drawing.Size(372, 170);
-            this.grpSummary.TabIndex = 2;
-            this.grpSummary.TabStop = false;
-            this.grpSummary.Text = "Monthly Summary";
-       
-            this.lblMonth.AutoSize = true;
-            this.lblMonth.Location = new System.Drawing.Point(15, 30);
-            this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(46, 15);
-            this.lblMonth.TabIndex = 0;
-            this.lblMonth.Text = "Month:";
-           
-            this.cmbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMonth.Location = new System.Drawing.Point(120, 26);
-            this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(190, 23);
-            this.cmbMonth.TabIndex = 1;
-          
-            this.lblYear.AutoSize = true;
-            this.lblYear.Location = new System.Drawing.Point(15, 64);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(33, 15);
-            this.lblYear.TabIndex = 2;
-            this.lblYear.Text = "Year:";
-      
-            this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbYear.Location = new System.Drawing.Point(120, 60);
-            this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(190, 23);
-            this.cmbYear.TabIndex = 3;
-        
-            this.btnMonthlySummary.Location = new System.Drawing.Point(120, 128);
-            this.btnMonthlySummary.Name = "btnMonthlySummary";
-            this.btnMonthlySummary.Size = new System.Drawing.Size(120, 30);
-            this.btnMonthlySummary.TabIndex = 4;
-            this.btnMonthlySummary.Text = "Show Summary";
-            this.btnMonthlySummary.UseVisualStyleBackColor = true;
-            this.btnMonthlySummary.Click += new System.EventHandler(this.btnMonthlySummary_Click);
-          
-            this.lblGrid.AutoSize = true;
-            this.lblGrid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblGrid.Location = new System.Drawing.Point(12, 234);
-            this.lblGrid.Name = "lblGrid";
-            this.lblGrid.Size = new System.Drawing.Size(73, 15);
-            this.lblGrid.TabIndex = 3;
-            this.lblGrid.Text = "Attendance";
-
-            this.dgvAttendance.AllowUserToAddRows = false;
-            this.dgvAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAttendance.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvAttendance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAttendance.Location = new System.Drawing.Point(12, 256);
-            this.dgvAttendance.MultiSelect = false;
-            this.dgvAttendance.Name = "dgvAttendance";
-            this.dgvAttendance.ReadOnly = true;
-            this.dgvAttendance.RowHeadersVisible = false;
-            this.dgvAttendance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttendance.Size = new System.Drawing.Size(744, 234);
-            this.dgvAttendance.TabIndex = 4;
-      
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 502);
-            this.Controls.Add(this.dgvAttendance);
-            this.Controls.Add(this.lblGrid);
-            this.Controls.Add(this.grpSummary);
-            this.Controls.Add(this.grpDetails);
-            this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "AttendanceForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tea Estate — Attendance";
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
-            this.grpDetails.ResumeLayout(false);
-            this.grpDetails.PerformLayout();
-            this.grpSummary.ResumeLayout(false);
-            this.grpSummary.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
-            this.ResumeLayout(false);
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            pnlHeader = new Panel();
+            lblTitle = new Label();
+            grpDetails = new GroupBox();
+            lblWorker = new Label();
+            cmbWorker = new ComboBox();
+            lblDate = new Label();
+            dtpDate = new DateTimePicker();
+            lblStatus = new Label();
+            cmbStatus = new ComboBox();
+            btnMark = new Button();
+            btnShowDay = new Button();
+            grpSummary = new GroupBox();
+            lblMonth = new Label();
+            cmbMonth = new ComboBox();
+            lblYear = new Label();
+            cmbYear = new ComboBox();
+            btnMonthlySummary = new Button();
+            lblGrid = new Label();
+            dgvAttendance = new DataGridView();
+            pnlHeader.SuspendLayout();
+            grpDetails.SuspendLayout();
+            grpSummary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAttendance).BeginInit();
+            SuspendLayout();
+            // 
+            // pnlHeader
+            // 
+            pnlHeader.BackColor = Color.FromArgb(34, 139, 34);
+            pnlHeader.Controls.Add(lblTitle);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Margin = new Padding(3, 4, 3, 4);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(873, 61);
+            pnlHeader.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 13.5F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(14, 11);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(137, 31);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Attendance";
+            // 
+            // grpDetails
+            // 
+            grpDetails.Controls.Add(lblWorker);
+            grpDetails.Controls.Add(cmbWorker);
+            grpDetails.Controls.Add(lblDate);
+            grpDetails.Controls.Add(dtpDate);
+            grpDetails.Controls.Add(lblStatus);
+            grpDetails.Controls.Add(cmbStatus);
+            grpDetails.Controls.Add(btnMark);
+            grpDetails.Controls.Add(btnShowDay);
+            grpDetails.Location = new Point(14, 75);
+            grpDetails.Margin = new Padding(3, 4, 3, 4);
+            grpDetails.Name = "grpDetails";
+            grpDetails.Padding = new Padding(3, 4, 3, 4);
+            grpDetails.Size = new Size(411, 227);
+            grpDetails.TabIndex = 1;
+            grpDetails.TabStop = false;
+            grpDetails.Text = "Mark Attendance";
+            // 
+            // lblWorker
+            // 
+            lblWorker.AutoSize = true;
+            lblWorker.Location = new Point(17, 40);
+            lblWorker.Name = "lblWorker";
+            lblWorker.Size = new Size(59, 20);
+            lblWorker.TabIndex = 0;
+            lblWorker.Text = "Worker:";
+            // 
+            // cmbWorker
+            // 
+            cmbWorker.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbWorker.Location = new Point(137, 35);
+            cmbWorker.Margin = new Padding(3, 4, 3, 4);
+            cmbWorker.Name = "cmbWorker";
+            cmbWorker.Size = new Size(217, 28);
+            cmbWorker.TabIndex = 1;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Location = new Point(17, 85);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(44, 20);
+            lblDate.TabIndex = 2;
+            lblDate.Text = "Date:";
+            // 
+            // dtpDate
+            // 
+            dtpDate.Format = DateTimePickerFormat.Short;
+            dtpDate.Location = new Point(137, 80);
+            dtpDate.Margin = new Padding(3, 4, 3, 4);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(217, 27);
+            dtpDate.TabIndex = 3;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(17, 131);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(52, 20);
+            lblStatus.TabIndex = 4;
+            lblStatus.Text = "Status:";
+            // 
+            // cmbStatus
+            // 
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatus.Location = new Point(137, 125);
+            cmbStatus.Margin = new Padding(3, 4, 3, 4);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(217, 28);
+            cmbStatus.TabIndex = 5;
+            // 
+            // btnMark
+            // 
+            btnMark.Location = new Point(137, 171);
+            btnMark.Margin = new Padding(3, 4, 3, 4);
+            btnMark.Name = "btnMark";
+            btnMark.Size = new Size(105, 40);
+            btnMark.TabIndex = 6;
+            btnMark.Text = "Mark";
+            btnMark.UseVisualStyleBackColor = true;
+            btnMark.Click += btnMark_Click;
+            // 
+            // btnShowDay
+            // 
+            btnShowDay.Location = new Point(249, 171);
+            btnShowDay.Margin = new Padding(3, 4, 3, 4);
+            btnShowDay.Name = "btnShowDay";
+            btnShowDay.Size = new Size(105, 40);
+            btnShowDay.TabIndex = 7;
+            btnShowDay.Text = "Show Day";
+            btnShowDay.UseVisualStyleBackColor = true;
+            btnShowDay.Click += btnShowDay_Click;
+            // 
+            // grpSummary
+            // 
+            grpSummary.Controls.Add(lblMonth);
+            grpSummary.Controls.Add(cmbMonth);
+            grpSummary.Controls.Add(lblYear);
+            grpSummary.Controls.Add(cmbYear);
+            grpSummary.Controls.Add(btnMonthlySummary);
+            grpSummary.Location = new Point(439, 75);
+            grpSummary.Margin = new Padding(3, 4, 3, 4);
+            grpSummary.Name = "grpSummary";
+            grpSummary.Padding = new Padding(3, 4, 3, 4);
+            grpSummary.Size = new Size(425, 227);
+            grpSummary.TabIndex = 2;
+            grpSummary.TabStop = false;
+            grpSummary.Text = "Monthly Summary";
+            grpSummary.Enter += grpSummary_Enter;
+            // 
+            // lblMonth
+            // 
+            lblMonth.AutoSize = true;
+            lblMonth.Location = new Point(17, 40);
+            lblMonth.Name = "lblMonth";
+            lblMonth.Size = new Size(55, 20);
+            lblMonth.TabIndex = 0;
+            lblMonth.Text = "Month:";
+            // 
+            // cmbMonth
+            // 
+            cmbMonth.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMonth.Location = new Point(137, 35);
+            cmbMonth.Margin = new Padding(3, 4, 3, 4);
+            cmbMonth.Name = "cmbMonth";
+            cmbMonth.Size = new Size(217, 28);
+            cmbMonth.TabIndex = 1;
+            // 
+            // lblYear
+            // 
+            lblYear.AutoSize = true;
+            lblYear.Location = new Point(17, 85);
+            lblYear.Name = "lblYear";
+            lblYear.Size = new Size(40, 20);
+            lblYear.TabIndex = 2;
+            lblYear.Text = "Year:";
+            // 
+            // cmbYear
+            // 
+            cmbYear.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbYear.Location = new Point(137, 80);
+            cmbYear.Margin = new Padding(3, 4, 3, 4);
+            cmbYear.Name = "cmbYear";
+            cmbYear.Size = new Size(217, 28);
+            cmbYear.TabIndex = 3;
+            // 
+            // btnMonthlySummary
+            // 
+            btnMonthlySummary.Location = new Point(137, 171);
+            btnMonthlySummary.Margin = new Padding(3, 4, 3, 4);
+            btnMonthlySummary.Name = "btnMonthlySummary";
+            btnMonthlySummary.Size = new Size(137, 40);
+            btnMonthlySummary.TabIndex = 4;
+            btnMonthlySummary.Text = "Show Summary";
+            btnMonthlySummary.UseVisualStyleBackColor = true;
+            btnMonthlySummary.Click += btnMonthlySummary_Click;
+            // 
+            // lblGrid
+            // 
+            lblGrid.AutoSize = true;
+            lblGrid.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblGrid.Location = new Point(14, 312);
+            lblGrid.Name = "lblGrid";
+            lblGrid.Size = new Size(90, 20);
+            lblGrid.TabIndex = 3;
+            lblGrid.Text = "Attendance";
+            // 
+            // dgvAttendance
+            // 
+            dgvAttendance.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(240, 240, 240);
+            dgvAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvAttendance.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvAttendance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAttendance.Location = new Point(14, 341);
+            dgvAttendance.Margin = new Padding(3, 4, 3, 4);
+            dgvAttendance.MultiSelect = false;
+            dgvAttendance.Name = "dgvAttendance";
+            dgvAttendance.ReadOnly = true;
+            dgvAttendance.RowHeadersVisible = false;
+            dgvAttendance.RowHeadersWidth = 51;
+            dgvAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAttendance.Size = new Size(850, 312);
+            dgvAttendance.TabIndex = 4;
+            // 
+            // AttendanceForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(873, 669);
+            Controls.Add(dgvAttendance);
+            Controls.Add(lblGrid);
+            Controls.Add(grpSummary);
+            Controls.Add(grpDetails);
+            Controls.Add(pnlHeader);
+            Font = new Font("Segoe UI", 9F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            Name = "AttendanceForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Tea Estate — Attendance";
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
+            grpDetails.ResumeLayout(false);
+            grpDetails.PerformLayout();
+            grpSummary.ResumeLayout(false);
+            grpSummary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAttendance).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

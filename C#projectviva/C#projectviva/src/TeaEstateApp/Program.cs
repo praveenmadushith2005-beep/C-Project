@@ -2,7 +2,7 @@ using System;
 
 namespace TeaEstate
 {
-    // Application entry point. Starts at the Login screen (Member 01).
+    
     internal static class Program
     {
         [STAThread]
@@ -11,8 +11,7 @@ namespace TeaEstate
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Create + seed the SQL Server LocalDB database on first launch
-            // (TeaEstateDB) — no manual DB setup needed, just run the app.
+            
             try
             {
                 DatabaseHelper.EnsureDatabase();

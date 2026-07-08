@@ -5,7 +5,7 @@ namespace TeaEstate
     
     public interface IDataManager
     {
-        DataTable GetAll();        
+        DataTable GetAll();       
         void DeleteById(int id);   
     }
 }

@@ -3,26 +3,19 @@ using System.Data;
 
 namespace TeaEstate
 {
-    // Member 04 — screen to manage estate sections (Add / Update / Delete / Clear / Refresh).
-    //
-    // The visual layout (controls, colours, positions) lives in SectionForm.Designer.cs
-    // so the form opens in the Visual Studio drag-and-drop designer. This file holds
-    // only the behaviour (what happens when each button is clicked).
-    //
-    // Class name + parameterless constructor are fixed because MainDashboard opens this
-    // form by name (new SectionForm()).
+    
     public partial class SectionForm : Form
     {
-        // Repository does all the database work for us.
+        
         private readonly SectionRepository _repo = new SectionRepository();
 
         public SectionForm()
         {
-            InitializeComponent();   // builds the controls (see SectionForm.Designer.cs)
-            LoadSections();          // show the data as soon as the form opens
+            InitializeComponent();   
+            LoadSections();         
         }
 
-        // Load all sections from the database into the grid.
+       
         private void LoadSections()
         {
             try
@@ -35,13 +28,13 @@ namespace TeaEstate
             }
         }
 
-        // Add button — validate, then insert.
+       
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 EstateSection section = ReadInput();
-                if (section == null) return;   // validation failed
+                if (section == null) return;   
 
                 _repo.Add(section);
                 MessageBox.Show("Section added.", "Success");
@@ -54,7 +47,7 @@ namespace TeaEstate
             }
         }
 
-        // Update button — needs a row selected, then save changes.
+        
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -81,7 +74,7 @@ namespace TeaEstate
             }
         }
 
-        // Delete button — needs a row selected, asks to confirm, then deletes.
+        
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -108,21 +101,20 @@ namespace TeaEstate
             }
         }
 
-        // Clear button — empty the inputs.
+        
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearInput();
         }
 
-        // Refresh button — reload the grid from the database.
+        
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             ClearInput();
             LoadSections();
         }
 
-        // Read + validate the textboxes into an EstateSection object.
-        // Returns null (and shows a message) if anything is invalid.
+     
         private EstateSection ReadInput()
         {
             string name = txtName.Text.Trim();
@@ -147,7 +139,7 @@ namespace TeaEstate
             return section;
         }
 
-        // Get the SectionID of the selected grid row (0 if nothing selected).
+       
         private int GetSelectedId()
         {
             if (dgvSections.CurrentRow == null) return 0;
@@ -156,10 +148,10 @@ namespace TeaEstate
             return Convert.ToInt32(value);
         }
 
-        // When the user clicks a row, fill the textboxes so it can be edited.
+      
         private void dgvSections_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;   // ignore clicks on the header
+            if (e.RowIndex < 0) return;  
             DataGridViewRow row = dgvSections.Rows[e.RowIndex];
 
             object name = row.Cells["SectionName"].Value;
@@ -169,7 +161,7 @@ namespace TeaEstate
             txtArea.Text = (area == null || area == DBNull.Value) ? "" : area.ToString();
         }
 
-        // Empty the textboxes.
+        
         private void ClearInput()
         {
             txtName.Clear();

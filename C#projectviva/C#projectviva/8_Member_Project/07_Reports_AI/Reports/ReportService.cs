@@ -2,16 +2,22 @@ using System.Data;
 
 namespace TeaEstate
 {
+    
     public class ReportService : IReportGenerator
     {
+        
         public string ReportTitle
         {
             get { return "Worker Performance"; }
         }
+
+        
         public DataTable GenerateReport()
         {
             return WorkerPerformanceReport();
         }
+
+ 
         public DataTable WorkerPerformanceReport()
         {
             string sql =
@@ -24,6 +30,8 @@ namespace TeaEstate
 
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+        
         public DataTable AttendanceHistoryReport()
         {
             string sql =
@@ -36,6 +44,8 @@ namespace TeaEstate
 
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+        
         public DataTable YieldBySectionReport()
         {
             string sql =
@@ -48,6 +58,8 @@ namespace TeaEstate
 
             return DatabaseHelper.ExecuteQuery(sql);
         }
+
+       
         public DataTable ProcessingLogReport()
         {
             string sql =
